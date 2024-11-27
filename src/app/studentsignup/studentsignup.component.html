@@ -1,0 +1,69 @@
+<p>studentsignup works!</p>
+
+<div class="conatainer">
+    <div class="col-7 mx-auto shadow p-4">
+        <h2 class="text-center text-bg-success " style="border-radius: 10PX;">Student Signup </h2>
+        <input type="text" placeholder="Full name" class="form-control my-2 shadow-none" [(ngModel)]="fullname" name="fname">
+        <input type="text" placeholder="email" class="form-control my-2 shadow-none" [(ngModel)]="email" name="mail">
+        <input type="text" placeholder="password" class="form-control my-2 shadow-none" [(ngModel)]="password" name="pass">
+        <input type="text" placeholder="phonenumber" class="form-control my-2 shadow-none" [(ngModel)]="phonenumber" name="phone">
+        
+
+        
+    
+        <label for="classSelect">Class</label>
+        <select class="form-control my-2 shadow-none" id="classSelect" [(ngModel)]="selectedClass" name="class" (change)="onClassChange()">
+          <option value="">Select Class</option>
+          <option value="jss1">Jss1</option>
+          <option value="jss2">Jss 2</option>
+          <option value="jss3">Jss 3</option>
+          <option value="SS1">SS 1</option>
+          <option value="SS2">SS 2</option>
+          <option value="SS3">SS 3</option>
+        </select>
+      
+  
+      
+      <div *ngIf="showDepartment">
+        <label for="departmentSelect">Department</label>
+        <select class="form-control my-2 shadow-none" id="departmentSelect" [(ngModel)]="department" name="department">
+          <option value="">Select Department</option>
+          <option value="science">Science</option>
+          <option value="arts">Arts</option>
+          <option value="commerce">Commercial</option>
+        </select>
+      </div>
+  
+      
+      
+        <label for="gender"  >Gender</label>
+        <select class="form-control my-2 shadow-none" id="gender" [(ngModel)]="gender" name="gender">
+          <option value="male"   class="shadow" >Male</option>
+          <option value="female" class="shadow" >Female</option>
+          
+        </select>
+      
+  
+     
+      
+        <label for="dob">Date of Birth</label>
+        <input type="date" class="form-control my-2 shadow-none" id="dob" [(ngModel)]="dob" name="dob">
+      
+
+
+
+
+
+
+
+        <button (click)="signup()" style="border-radius: 5PX;text-align: center; " class=" butt w-25">signup</button>
+
+        
+
+        <p>Existing  account? <a routerLink="/studentsignin">Sign in</a></p>
+
+    </div>
+
+    
+
+</div>

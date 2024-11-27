@@ -1,0 +1,29 @@
+<p>registercourses works!</p>
+
+
+<div class="container my-4">
+    <h2 class="text-center">Register Courses</h2>
+  
+    <div class="mb-3">
+      <label for="courseSelect" class="form-label">Select a Course</label>
+      <select id="courseSelect" class="form-select" [(ngModel)]="selectedCourse">
+        <option value="" disabled selected>-- Select a Course --</option>
+        <option *ngFor="let course of predefinedCourses" [value]="course" [disabled]="availableCourses.includes(course)">
+          {{ course }}
+        </option>
+      </select>
+    </div>
+  
+    <button class="btn btn-success w-100 mb-3" (click)="addCourse()">Add Course</button>
+  
+    <h3 class="text-center">Registered Courses</h3>
+    <ul class="list-group">
+      <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let course of availableCourses">
+        {{ course }}
+        <button class="btn btn-danger btn-sm" (click)="deleteCourse(course)">Delete</button>
+      </li>
+    </ul>
+  </div>
+  
+  
+

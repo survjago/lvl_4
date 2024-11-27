@@ -1,0 +1,27 @@
+<p>contact-app works!</p>
+<div>
+    <input type="text"[(ngModel)]="firstname" placeholder="firstname">
+    <input type="text"[(ngModel)]="lastname" placeholder="lastname">
+    <input type="text"[(ngModel)]="email" placeholder="email">
+    <input type="text"[(ngModel)]="phonenumber" placeholder="phonenumeber">
+    <button (click)="create()">Create contact</button>
+</div>
+
+
+<div>
+ <h2>Products</h2>
+ <ol>
+    <li *ngFor="let buyer of Buyers let i = index" >
+        <strong>FirstName: {{buyer.Firstname}}</strong> <br>
+        <strong>LastName: {{buyer.Lastname}}</strong> <br>
+        <strong>Email: {{buyer.Email}}</strong> <br>
+        <strong>Phonenumber: {{buyer.Phonenumber}}</strong> <br>
+        <button class="btn btn-outline-danger" (click)="delete(i)">Delete</button> 
+
+       <a routerLink="view" (click)="viewcontact(i)"><button class="btn btn-outline-primary ">view</button></a> 
+       <a routerLink="edit/{{i}}"><button class="btn btn-success">Edit</button></a>
+       <!-- <button (click)="check(i)" class="btn btn-primary">edit</button> -->
+    </li>
+ </ol> 
+
+</div>

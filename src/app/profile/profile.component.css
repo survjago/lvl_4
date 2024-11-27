@@ -1,0 +1,7 @@
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    border: 5px solid #6c757d; /* Bootstrap secondary color */
+    position: relative;
+  }
+  

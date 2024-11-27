@@ -1,0 +1,18 @@
+<p>studentsignin works!</p>
+
+<div class="container">
+    <h5 class="text-success text-center">signin page| </h5>
+    <div class="col-8 mx-auto shadow p-3">
+
+       
+
+        <input type="text" placeholder="email" class="form-control my-2 shadow-none" [(ngModel)]="email">
+        <input type="text" placeholder="password" class="form-control my-2 shadow-none" [(ngModel)]="password">
+        <button (click)="signin()">signin</button><br>
+        <p class="text-danger text-center mx-auto " style="background-color: rgba(255, 0, 0, 0.15); width: 250px; border-radius: 70px;align-self: center;">{{msg}}</p>
+            <p>Don't have an account? <a routerLink="/studentsignup">Sign up</a></p>
+            <p>Forgot password? <a routerLink="/forgotpassword">Reset Password</a></p>
+    </div>
+   
+
+</div>

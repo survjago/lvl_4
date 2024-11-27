@@ -1,0 +1,8 @@
+.butt{
+    /* background-color: green; */
+    /* color: whitesmoke; */
+}
+.butt:hover{
+    background-color: green;
+    color: wheat;
+}

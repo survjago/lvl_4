@@ -1,0 +1,113 @@
+<p>studentdashboard works!</p>
+
+<!DOCTYPE html>
+<html lang="en">
+    <link rel="stylesheet" href="studentdashboard.component.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">My Dashboard</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="/">Home |</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="">Note |</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="/classmates">view classmates |</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="/profile">Profile |</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" routerLink="/register-courses">Register Course |</a>
+                  </li>
+                  
+                </ul>
+              </div>
+        </div>
+    </nav>
+
+    
+    <div class="container mt-4">
+        <div class="row">
+                
+                <div class="bod navbar-nav ms-3 ">
+                    
+                        <img class="w-100 ms-2 mt-1 rounded-circle" src={{currentuser.image}} alt="">
+                    
+                </div>
+
+                
+                  
+                  
+
+            
+            <div class="col-md-3">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action active">Dashboard</a>
+                    <button class="btn btn-outline-danger" (click)="goToResetPassword()">Reset Password</button>
+                    <button class="btn btn-outline-danger" (click)="logout()">Logout</button>
+                </div>
+            </div>
+
+            
+            <div class="col-md-7">
+                <div class="card">
+                    <div class="card-header bg-primary text-white">
+                        Welcome to the Dashboard
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Hello, {{currentuser.fullname}}!</h5>
+                        <h6> HAMZAT College is a registered Career College under the Ontario Career Colleges Act, 2005 and is a member of the Career Colleges Ontario and National Association of Career Colleges. Since 1998, CIMT College has been a guiding force for students at the local as well as international level, by providing them with an educational experience that meets international standards and benchmarks. Canadian Institute of Management and Technology has been identified by the provincial government to be in the list of Designated Learning Institute to host international students starting June 1, 2014
+
+                            Students join us with hopes and aspirations that are fulfilled with the collaborative efforts of fellow students, faculty and staff. We ensure that no stone is left unturned to make our students comfortable and confident in joining the workforce. The faculty at CIMT College is well versed in theoretical, as well as practical aspects of the programs and trains students in the finer skills required for success. Methods of instruction used by the faculty are based on industry research, so that our students are educated to perfection, matching the needs of employers.
+                            
+                            CIMT College is conveniently located in the Greater Toronto Area with seven campuses - Malton-Mississauga, Brampton, Dundas Street-Mississauga, Mississauga Trades, Hamilton, Toronto, and Scarborough. We are a preferred destination for international students because of our close proximity to Pearson International Airport, and easy access through local transportation routes (bus and train).</h6>
+                        <p class="card-text">Select an option from the menu to get started.</p>
+                    </div>
+
+                    
+                    <div class="card p-3 mb-4">
+                        <h5 class="card-title">Student Information</h5>
+                        <p class="card-text " >Name: {{currentuser.fullname}}</p>
+                        <p class="card-text">Email: {{currentuser.email}}</p>
+                        <p class="card-text">class: {{currentuser.class}}</p>
+                        <p class="card-text">department: {{currentuser.department}}</p>
+                        <p class="card-text">gender: {{currentuser.gender}}</p>
+                        <p class="card-text">Date Of Birth: {{currentuser.dob}}</p>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+
+
+             
+
+        </div>
+    
+    </div>
+
+    <div class=""></div>
+
+    
+    <footer class="bg-dark text-center text-white py-3 mt-4">
+        &copy; 2024 My Dashboard. All Rights Reserved.
+    </footer>
+</body>
+</html>
+
+

@@ -1,0 +1,23 @@
+<div class="col d-flex  flex-row">
+    <div class="col-6 my-1">
+        <div (click)="run(infoDisplay)" *ngFor="let infoDisplay of this.displayInfo.storeddata" class="container  mx-auto shadow bg-primary rounded w-50 my-3">
+            <div class="fw-medium ">FIRSTNAME:{{infoDisplay.Firstname}}</div>
+            <div class="fw-medium">LASTNAME:{{infoDisplay.Lastname}}</div>
+            <div class="fw-medium">Email:{{infoDisplay.Email}}</div>
+            <div class="fw-medium">Phonenumber:{{infoDisplay.Phonenumber}}</div>
+            <hr>
+        
+        
+        </div>
+    </div>
+    
+
+    <div class="col-6">
+
+        <app-viewdisplay></app-viewdisplay>
+    </div>
+    
+
+</div>
+
+

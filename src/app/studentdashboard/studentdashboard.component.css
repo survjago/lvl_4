@@ -1,0 +1,29 @@
+.bod{
+    /* position: relative;
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    border: 10px solid black;
+    background: blueviolet; */
+    position: relative;
+    height: 150px;
+    width: 150px;
+    border: 5px solid #000;
+    border-radius: 50%;
+    overflow: hidden; 
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+  
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
+  }
+  
+
+  

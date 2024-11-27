@@ -1,0 +1,39 @@
+<p>noteapp works!</p>
+
+<div class="conatainer rounded">
+
+    <div class="col-6 mx-auto shadow my-3 p-3 ">
+        <h1 class="text-success text-center ">Note App</h1>
+
+        <form [formGroup]="noteone">
+            <input type="text" class="form-control my-2" placeholder="Title" formControlName="ntitle" name="title">
+            <textarea type="text" class="form-control my-2" placeholder="Enter your note here" formControlName="nnote" name="note" ></textarea>
+            <!-- <button class="btn btn-outline-success w-100 " (click)="reactive()">Add note</button> -->
+            <button type="button" class="btn btn-outline-success w-100" (click)="reactive($event)">Add note</button>
+
+
+        </form>
+
+       
+          
+
+    </div>
+        
+    <div *ngFor="let note of dataarray; let i = index" class="container rounded shadow col-4 my-3 hv"   >
+        <div (click)="view(i)">
+            <h3 class="text-dark">Title: {{ note.ntitle }}</h3>
+            <p>Content: {{ note.nnote }}</p>
+           
+        </div>
+        
+        
+    <button class="btn btn-warning m-1" (click)="edit(i)">Edit</button>
+    <button class="btn btn-danger m-1" (click)="delete(i)">Delete</button>
+
+       
+      </div>
+      
+
+</div>
+
+

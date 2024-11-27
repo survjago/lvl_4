@@ -1,0 +1,124 @@
+<p>steppermaterial works!</p>
+<button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+    {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+  </button>
+  <mat-stepper [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field>
+          <mat-label>First name</mat-label>
+          <input matInput placeholder=" First name" formControlName="firstCtrl" required> 
+          
+        </mat-form-field><br>
+
+        <mat-form-field>
+            <mat-label>Last name</mat-label>
+            <input matInput placeholder=" Last name" formControlName="lastCtrl" required> 
+            
+          </mat-form-field><br>
+
+          <mat-form-field>
+            <mat-label>Age</mat-label>
+            <input matInput placeholder=" Age" formControlName="age" required> 
+            
+          </mat-form-field><br>
+
+          <mat-form-field>
+            <mat-label>Gender</mat-label>
+            <input matInput placeholder=" Gender" formControlName="gender" required> 
+            
+          </mat-form-field><br>
+
+
+        
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+    <mat-step [stepControl]="secondFormGroup" label="Fill out your address">
+      <form [formGroup]="secondFormGroup">
+
+
+        <mat-form-field>
+          <mat-label>Home Address</mat-label>
+          <input matInput formControlName="Home" placeholder="Ex. 1 Main St, New York, NY"
+                 required>
+        </mat-form-field><br>
+
+        <mat-form-field>
+            <mat-label>Email address </mat-label>
+            <input matInput formControlName="email" placeholder="Ex. ******@email.com"
+                   required>
+          </mat-form-field><br>
+
+          <mat-form-field>
+            <mat-label>State</mat-label>
+            <input matInput formControlName="state" placeholder="Ex. New York"
+                   required>
+          </mat-form-field><br>
+
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+
+
+
+
+
+    <mat-step [stepControl]="thirdFormGroup" label="Fill out your Security informations">
+        <form [formGroup]="thirdFormGroup">
+  
+  
+          <mat-form-field>
+            <mat-label>Security question</mat-label>
+            <input matInput formControlName="question" placeholder="Ex. What is your favorite color?"
+                   required>
+          </mat-form-field><br>
+
+          <mat-form-field>
+            <mat-label>Security Answer</mat-label>
+            <input matInput formControlName="Answer" placeholder="Ex. Blue"
+                   required>
+          </mat-form-field><br>
+  
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input matInput formControlName="password" placeholder=""
+                   required>
+          </mat-form-field><br>
+  
+          <mat-form-field>
+            <mat-label> confirm Password</mat-label>
+            <input matInput formControlName="password2" placeholder=""
+                   required>
+          </mat-form-field><br>
+  
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+
+
+
+
+
+
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="send()">send</button>
+      </div>
+    </mat-step>
+  </mat-stepper>
+  

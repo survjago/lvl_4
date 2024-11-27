@@ -1,0 +1,73 @@
+<p>profile works!</p>
+
+
+<div class="container mt-5 text-center">
+    <!-- Profile Picture Section -->
+    <div class="d-flex justify-content-center align-items-center">
+      <div class="position-relative">
+        <div class="profile-pic rounded-circle bg-secondary overflow-hidden">
+          <img 
+            *ngIf="previewImage" 
+            [src]="previewImage" 
+            alt="Profile Picture" 
+            class="w-100 h-100"
+            style="object-fit: cover;" 
+          />
+          <div *ngIf="!previewImage" class="d-flex justify-content-center align-items-center h-100">
+            <span class="text-white">No Image</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+   
+    <div class="mt-3">
+      <!-- Select File -->
+      <label for="fileInput" class="btn btn-outline-primary">
+        Select File
+        <input 
+          type="file" 
+          id="fileInput" 
+          class="d-none" 
+          (change)="onFileSelected($event)" 
+        />
+      </label>
+  
+      
+      <button 
+        class="btn btn-success ms-2"
+        [disabled]="!selectedFile" 
+        (click)="uploadProfilePicture()"
+      >
+        Upload
+      </button>
+    </div>
+
+
+    <div class="card">
+      <div class="card-header bg-primary text-white">
+        <h5 class="card-title">Student Information</h5>
+      </div>
+      
+      <div class="card p-3 mb-4">
+     
+        <p class="card-text " >Name: {{currentstudent.fullname}}</p>
+        <p class="card-text">Email: {{currentstudent.email}}</p>
+        <p class="card-text">class: {{currentstudent.class}}</p>
+        <p class="card-text">department: {{currentstudent.department}}</p>
+        <p class="card-text">gender: {{currentstudent.gender}}</p>
+        <p class="card-text">Date Of Birth: {{currentstudent.dob}}</p>
+        
+    </div>
+
+
+
+
+    </div>
+
+    
+
+
+
+  </div>
+    
